@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+		<link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+		<link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+		<script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+		<script>
+			document.addEventListener('prechange', function(event) {
+			  document.querySelector('ons-toolbar .center')
+				.innerHTML = event.tabItem.getAttribute('label');
+			});
+		</script>
+        <title>Blank App</title>
+    </head>
+    <body>
+		<ons-page>
+			<ons-toolbar>
+				<div class="center">Satellite Monitoring</div>
+			</ons-toolbar>
+
+			<ons-tabbar swipeable position="auto">
+				<ons-tab page="dashboard.html" label="Dashboard" icon="ion-home, material:md-home" active>
+				</ons-tab>
+				<ons-tab page="satellite.html" label="Satellite" icon="ion-map" active-icon="md-face">
+				</ons-tab>
+				<ons-tab page="ground.html" label="Ground" icon="ion-earth, material:md-home">
+				</ons-tab>
+				<ons-tab page="transponder.html" label="Transponder" icon="md-settings" active-icon="md-face">
+				</ons-tab>
+			</ons-tabbar>
+		</ons-page>
+
+		<template id="dashboard.html">
+		  <ons-page id="Tab1">
+			
+				<ons-card>
+					<div class="title">Satellite SOH</div>
+					<div class="content">
+						<ul class="list">
+						  <li class="list-header">
+							EPS
+						  </li>
+						  <li class="list-item">
+							<div class="list-item__center">SA Power</div>
+						  </li>
+						  <li class="list-item">
+							<div class="list-item__center">SC Power</div>
+						  </li>
+						  <li class="list-item">
+							<div class="list-item__center">Margin</div>
+						  </li>
+						</ul>
+						<ul class="list">
+						  <li class="list-header">
+							AOCS
+						  </li>
+						  <li class="list-item">
+							<div class="list-item__center">Attitude Error</div>
+						  </li>
+						  <li class="list-item">
+							<div class="list-item__center">SC Power</div>
+						  </li>
+						  <li class="list-item">
+							<div class="list-item__center">Margin</div>
+						  </li>
+						</ul>
+					</div>
+				</ons-card>
+				<ons-card>
+					<div class="title">Ground Check</div>
+					<div class="content">
+						round Checklist goes here
+					</div>
+				</ons-card>
+				<ons-card>
+					<div class="title">Transponder Capacity</div>
+					<div class="content">
+						Transponder Capacity goes here
+					</div>
+				</ons-card>
+		
+		  </ons-page>
+		</template>
+
+		<template id="satellite.html">
+		  <ons-page id="Tab2">
+			  <ons-card>
+				<div class="title">State of Health Satellite</div>
+				<div class="content">
+					<ul class="list">
+						  <li class="list-header">
+							EPS
+						  </li>
+						  <li class="list-item">
+							<div class="list-item__center">SA Power</div>
+						  </li>
+						  <li class="list-item">
+							<div class="list-item__center">SC Power</div>
+						  </li>
+						  <li class="list-item">
+							<div class="list-item__center">Margin</div>
+						  </li>
+						</ul>
+						<ul class="list">
+						  <li class="list-header">
+							AOCS
+						  </li>
+						  <li class="list-item">
+							<div class="list-item__center">Attitude Error</div>
+						  </li>
+						  <li class="list-item">
+							<div class="list-item__center">SC Power</div>
+						  </li>
+						  <li class="list-item">
+							<div class="list-item__center">Margin</div>
+						  </li>
+						</ul>
+				</div>
+			  </ons-card>
+		  </ons-page>
+		</template>
+		
+		<template id="ground.html">
+		  <ons-page id="Tab3">
+			<p style="text-align: center;">
+			  Ground goes here
+			</p>
+		  </ons-page>
+		</template>
+		
+		<template id="transponder.html">
+		  <ons-page id="Tab4">
+			<p style="text-align: center;">
+			  transponder goes here
+			</p>
+		  </ons-page>
+		</template>
+	
+		
+	  
+        <script type="text/javascript" src="cordova.js"></script>
+    </body>
+</html>
